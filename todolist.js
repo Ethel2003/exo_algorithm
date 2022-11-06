@@ -1,35 +1,44 @@
-let getlist=document.getElementById("mylist")
+let getlist = document.getElementById("mylist");
+ 
 
 class TodoList{
     constructor(element){
         this.ListElement=element;
         this.textList=[];
         this.li;
+        this.getLi;
     }
 
     static createListItem(text){
         this.li=document.createElement('li');
-        getlist.append(this.li)
-        this.li.document.innerHTML=text;
+        this.li.textContent=text;
+        getlist.append(this.li);
     }
 
     update(){
         //getlist.removeChild(this.li);
-        this.createListItem(text)
+        TodoList.createListItem(this.textList);
+        this.getLi = document.querySelector("li");
+        this.getLi.remove();
+        TodoList.createListItem(this.textList);
     }
 
     add(text){
         this.textList.push(text);
+        console.log(this.textList);
         this.update();
     }
 
-    remove(index){
+    remove1(index){
         this.textList.splice(index,1);
         this.update();
     }
 }
 
 const todoApp=new TodoList(getlist);
-createListItem("tache à faire");
-console.log(todoApp);
-//todoApp.add("Tache à faire 1");
+todoApp.add("Tache à faire 1");
+todoApp.add("Tache à faire 2");
+todoApp.add("Tache à faire 3");
+todoApp.add("Tache à faire 4");
+todoApp.remove1(1);
+//console.log(TodoList.createListItem("tache à faire"));
