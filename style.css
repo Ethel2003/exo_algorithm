@@ -1,0 +1,51 @@
+div{
+    border:1px solid black;
+    width:500px;
+    height:500px;
+    margin:0 auto;
+    padding: .5rem 1rem;
+}
+
+h1{
+    text-align: center;
+}
+
+main{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h2{
+    border-bottom: 1px solid black;
+}
+
+input{
+    width:250px;
+    height: 1.5rem;
+}
+
+button{
+    height: 2rem;
+    width: 4rem;
+}
+
+li{
+    border: 1px solid black;
+    margin-block:1rem;
+    border-radius:5px ;
+    padding: .5rem;
+    position:relative;
+}
+
+ul{
+    list-style: none;
+    margin:0;
+    padding: 0;
+}
+
+svg{
+    width: 20px;
+    position:absolute;
+    left:95%;
+}
